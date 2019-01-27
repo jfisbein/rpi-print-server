@@ -3,14 +3,14 @@
 EXPECTED_ARGS=1
 
 if [ $# -ne $EXPECTED_ARGS ]; then
-	echo "Usage: $(basename "$0") {desired_print_server_name}"
-	exit 1
+  echo "Usage: $(basename "$0") {desired_print_server_name}"
+  exit 1
 fi
 SERVER_NAME="${1}"
 
 if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root" 1>&2
-   exit 2
+  echo "This script must be run as root" 1>&2
+  exit 2
 fi
 
 # Update all packages
