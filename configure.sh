@@ -3,7 +3,7 @@
 EXPECTED_ARGS=1
 
 if [ $# -ne $EXPECTED_ARGS ]; then
-	echo "Usage: `basename $0` {desired_print_server_name}"
+	echo "Usage: $(basename "$0") {desired_print_server_name}"
 	exit 1
 fi
 SERVER_NAME="${1}"
