@@ -24,7 +24,7 @@ apt-get -y install cups hplip
 usermod -a -G lpadmin pi
 
 # Allow remote admin
-udo runuser -l "pi" -c "cupsctl --remote-admin --remote-any --share-printers --user-cancel-any"
+runuser --login "pi" --command "cupsctl --remote-admin --remote-any --share-printers --user-cancel-any"
 systemctl restart cups
 
 # Change host name
